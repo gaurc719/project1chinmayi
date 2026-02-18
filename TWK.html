@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Paragraph Reveal</title>
+  <link rel="stylesheet" href="TWK.css">
+</head>
+<body>
+    <a href="TLM.html" class="floating-orb orb-link">
+  <svg xmlns="http://www.w3.org/2000/svg" width="121" height="113" viewBox="0 0 121 113" fill="none">
+    <g filter="url(#filter0_d_125_19)">
+      <ellipse cx="60.5" cy="52.5" rx="55.5" ry="51.5" fill="url(#paint0_radial_125_19)"/>
+    </g>
+    <defs>
+      <filter id="filter0_d_125_19" x="0" y="0" width="121" height="113" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"/>
+        <feOffset dy="4"/>
+        <feGaussianBlur stdDeviation="2.5"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_125_19"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_125_19" result="shape"/>
+      </filter>
+
+      <radialGradient id="paint0_radial_125_19"
+        cx="0" cy="0" r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(60.5 52.5) rotate(90) scale(51.5 55.5)">
+        <stop stop-color="#656565"/>
+        <stop offset="1" stop-color="#222222"/>
+      </radialGradient>
+    </defs>
+  </svg>
+</a>
+    <p class="line1">
+  The line is made up of an infinite&nbsp;
+  <span class="hover-word" data-target="word1">number of</span>
+  <span class="reveal-word hover-word" id="word1" data-target="block1"> points;</span>
+  <span class="reveal-block" id="block1">
+    the plane of an infinite number of lines; the volume of an infinite number of planes; the hypervolume of an infinite number of volumes. . . . No, unquestionably this is not — more geometrico — the best way of beginning my story. To claim that it is true is nowadays the convention of every made-up story. Mine, <span class="hover-word" data-target="block2">however, is true</span>.
+  </span>
+  <span class="reveal-block" id="block2">
+    I live alone in a fourth-floor apartment on Belgrano Street, in Buenos Aires. Late one evening, a few months back, I heard a knock at my door. I opened it and 
+    <span class="hover-word" data-target="gif1">
+      a stranger stood there. He was a tall man, with nondescript features
+    </span> 
+    <span class="hover-word" data-target="gif2">— or perhaps it was my myopia that made them seem that way. </span>
+  </span>
+    <span class="reveal-block" id="block1">
+Dressed  in  gray  and  carrying  a  gray  suitcase  in  his hand,  he  had  an  unassuming  look  about  him.  I saw  at  once  that  he  was  a  foreigner. <span class="hover-word" data-target="block2">seem  that  way</span>.
+  </span>
+</p>
+
+<!-- GIF container -->
+<img src="/Users/chinmayigaur/Desktop/core interaction lec/core interaction/TWK.gif" id="gif1" class="hover-gif" alt="stranger GIF">
+<img src="/Users/chinmayigaur/Desktop/core interaction lec/core interaction/glasses.GIF" id="gif2" class="hover-gif2" alt="stranger GIF">
+
+
+<script src="TWK.js"></script>
+</body>
+</html>
