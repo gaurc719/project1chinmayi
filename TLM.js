@@ -17,17 +17,21 @@ document.addEventListener("DOMContentLoaded", () => {
     clearTimeout(orbTimer);
   });
 });
+
 const textBlock = document.getElementById("textBlock");
+const paragraphs = document.querySelectorAll("#textBlock p");
 
-// Split text into words
-const words = textBlock.innerText.split(" ");
-textBlock.innerHTML = "";
+// Wrap each word in spans
+paragraphs.forEach(paragraph => {
+  const words = paragraph.innerText.split(" ");
+  paragraph.innerHTML = "";
 
-words.forEach(word => {
-  const span = document.createElement("span");
-  span.classList.add("word");
-  span.innerText = word + " ";
-  textBlock.appendChild(span);
+  words.forEach(word => {
+    const span = document.createElement("span");
+    span.classList.add("word");
+    span.innerText = word + " ";
+    paragraph.appendChild(span);
+  });
 });
 
 const wordElements = document.querySelectorAll(".word");
@@ -43,8 +47,4 @@ wordElements.forEach((word, index) => {
       }
     }
   });
-});
-
-textBlock.addEventListener("mouseleave", () => {
-  wordElements.forEach(w => w.classList.remove("active"));
 });

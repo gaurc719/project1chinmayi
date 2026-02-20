@@ -1,3 +1,47 @@
+.floating-orb {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 121px;
+  height: 113px;
+
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: orbFloat 6s ease-in-out infinite;
+  cursor: pointer;
+  padding-right: 40px;
+  padding-top: 60px;
+}
+
+.floating-orb svg {
+  position: fixed;
+  top: 100;
+  left: 100;
+}
+
+.orb-text {
+  position: relative;
+  color: white;
+  font-family: "Garamond", "Times New Roman", serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  pointer-events: none;
+}
+
+@keyframes orbFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating-orb:hover {
+  animation-play-state: paused;
+}
 body {
   font-family: "Garamond", "Times New Roman", serif;
   font-size: 20px;
@@ -72,17 +116,15 @@ p {
 .hover-gif2.visible {
   opacity: 1;
 }
-.floating-orb {
-  position:relative
-  right: 40px;
-  bottom: 40px;
 
-  z-index: 6;
-  display: inline-block;
-
-  animation: orbFloat 6s ease-in-out infinite;
-  cursor: pointer;
+.reveal-word {
+  opacity: 0;
+  display: inline;
+  transition: opacity 0.8s ease;
 }
-.floating-orb:hover {
-  animation-play-state: running;
+
+.reveal-block {
+  opacity: 0;
+  display: inline-block;   /* ← important */
+  transition: opacity 0.8s ease;
 }

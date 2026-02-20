@@ -1,3 +1,45 @@
+// Scroll Reveal
+const fragments = document.querySelectorAll(".fragment");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.3 });
+
+fragments.forEach(fragment => observer.observe(fragment));
+
+
+// Fire Hover Effect
+const igniteWords = document.querySelectorAll(".ignite");
+const fireOverlay = document.getElementById("fireOverlay");
+
+igniteWords.forEach(word => {
+  word.addEventListener("mouseenter", () => {
+    fireOverlay.classList.add("active");
+  });
+  word.addEventListener("mouseleave", () => {
+    fireOverlay.classList.remove("active");
+  });
+});
+
+
+// Ending Destabilization
+const ending = document.getElementById("ending");
+
+const endingObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      ending.classList.add("distort");
+    }
+  });
+}, { threshold: 0.8 });
+
+endingObserver.observe(ending);
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const orb = document.querySelector(".orb-link");
   let orbTimer = null;
